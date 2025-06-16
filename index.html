@@ -25,7 +25,7 @@
         }
 
         #hero {
-            background-image: radial-gradient(circle at 50% 50%, #2DA8D2 70%, #00cec9);
+            background-image: radial-gradient(circle at 50% 50%, #2DA8D2 75%, #00cec9);
             display: flex;
             align-items: center;
             justify-content: center;
@@ -37,14 +37,15 @@
         }
 
         #hero-content {
-            display: grid;
-            grid-template-rows: repeat(3, 1fr);
+            display: flex;
+            flex-direction: column;
             color: white;
             min-width: 300px;
             width: 800px;
             padding: 20px;
             border-radius: 10px;
             background: rgba(255, 255, 255, 0.2);
+            gap: 20px;
 
             h1 {
                 font-size: 2rem;
@@ -87,6 +88,8 @@
             height: auto;
             object-fit: cover;
             border-radius: 50%;
+            box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.3), 
+                10px 10px 20px rgba(0, 0, 0, 0.1);
         }
 
         @media  (max-width: 1200px) {
@@ -119,6 +122,11 @@
                 height: auto;
                 object-fit: contain;
                 border-radius: 50%;
+            }
+
+            #hero-btn {
+                position: inherit;
+                bottom: 0;
             }
         }
     </style>
