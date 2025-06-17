@@ -1,0 +1,178 @@
+/* General Reset and Box Sizing */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            /* Prevent horizontal scroll issues, especially with fixed/absolute elements */
+            overflow-x: hidden;
+        }
+
+        /* Header Styling */
+        header {
+            display: flex;
+            /* Use space-between for logo on one side and nav on the other */
+            justify-content: space-between;
+            align-items: center; /* Vertically align items */
+            background-color: #2DA8D2;
+            padding: 15px 20px; /* Adjust padding for better look on smaller screens */
+            flex-wrap: wrap; /* Allow items to wrap if screen is too small */
+        }
+
+        .logo {
+            color: white;
+            font-weight: bold;
+            font-size: 1.5rem; /* Make logo more prominent */
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+            display: flex; /* Use flexbox for horizontal navigation */
+            flex-wrap: wrap; /* Allow nav items to wrap */
+            justify-content: center; /* Center nav items when wrapped */
+        }
+
+        nav ul li {
+            margin: 0 10px; /* Reduce margin slightly for smaller screens */
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            padding: 5px 0; /* Add padding for clickable area */
+            display: block; /* Make the whole padding area clickable */
+        }
+
+        /* Hero Section Styling */
+        #hero {
+            display: flex; /* Use flexbox for more flexible layout */
+            flex-direction: column; /* Default to column for mobile-first approach */
+            background-image: radial-gradient(circle at 50% 50%, #2DA8D2 70%, #2382a1);
+            text-align: center;
+            padding: 40px 20px; /* Consistent padding */
+            min-height: 100vh; /* Ensure it takes full viewport height */
+            justify-content: center; /* Center content vertically */
+            align-items: center; /* Center content horizontally */
+            gap: 30px; /* Space between flex items */
+        }
+
+        #hero-content {
+            display: flex;
+            flex-direction: column;
+            color: white;
+            /* Use max-width to control content width, allow flex-grow */
+            max-width: 700px;
+            width: 100%; /* Take full width within max-width */
+            padding: 25px; /* Slightly more padding */
+            border-radius: 10px;
+            background: rgba(255, 255, 255, 0.2);
+            gap: 15px; /* Space between content elements */
+        }
+
+        #hero-content h1 {
+            font-size: clamp(1.8rem, 4vw + 1rem, 2.8rem); /* Responsive font size */
+            margin-bottom: 15px;
+        }
+
+        #hero-content p {
+            font-size: clamp(0.9rem, 1.5vw + 0.5rem, 1.2rem); /* Responsive font size */
+            line-height: 1.5;
+        }
+
+        #hero-btn {
+            /* Position handling will be done by flexbox on #hero */
+            /* Remove absolute positioning styles from here */
+        }
+
+        #hero-btn button {
+            background-color: #FEC908;
+            color: black;
+            border: none;
+            padding: 12px 25px; /* More generous padding for button */
+            border-radius: 20px;
+            font-size: 1.1rem; /* Slightly larger font for button */
+            cursor: pointer;
+            transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transition */
+        }
+
+        #hero-btn button:hover {
+            background-color: black;
+            color: white;
+        }
+
+        #hero-img img {
+            /* Use max-width for responsive images */
+            max-width: 350px; /* Set a max-width for the image */
+            width: 80%; /* Allow image to shrink on smaller screens */
+            height: auto;
+            object-fit: cover;
+            border-radius: 50%;
+            box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.3),
+                        10px 10px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Footer Styling */
+        footer {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            background-color: #2DA8D2;
+            color: white; /* Added for better visibility */
+            padding: 20px;
+            text-align: center;
+        }
+
+        footer h2 {
+            margin-bottom: 10px;
+            font-size: 1.8rem;
+        }
+
+        footer p {
+            margin-bottom: 5px;
+            font-size: 0.9rem;
+        }
+
+        /* Media Queries for Larger Screens */
+        @media (min-width: 768px) {
+            #hero {
+                flex-direction: row; /* Change to row direction on larger screens */
+                text-align: left; /* Align text left on wider screens */
+                padding: 40px; /* More padding for desktop */
+                justify-content: space-around; /* Distribute space between items */
+            }
+
+            #hero-content {
+                /* Reset grid specific properties */
+                max-width: 500px; /* Adjust max-width for better balance */
+                text-align: left;
+            }
+
+            #hero-content h1 {
+                font-size: 3rem; /* Larger font for desktop */
+            }
+
+            #hero-content p {
+                font-size: 1.1rem; /* Larger font for desktop */
+            }
+
+            #hero-img img {
+                max-width: 450px; /* Larger image on desktop */
+                width: 100%; /* Ensure it respects max-width */
+            }
+        }
+
+        @media (min-width: 1024px) {
+            #hero-content {
+                max-width: 600px; /* Even wider content area */
+            }
+
+            #hero-img img {
+                max-width: 500px; /* Even larger image */
+            }
+        }

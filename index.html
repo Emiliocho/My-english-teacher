@@ -4,148 +4,40 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My English Teacher</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: Arial, sans-serif;
-        }
-
-        section {
-            display: flex;
-            width: 100%;
-            min-height: 100vh;
-            align-items: center;
-            justify-content: center;
-            padding: 20px;
-        }
-
-        #hero {
-            background-image: radial-gradient(circle at 50% 50%, #2DA8D2 75%, #00cec9);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
-            gap: 40px;
-            padding: 40px;
-            width: 100%;
-            min-height: 100vh;
-        }
-
-        #hero-content {
-            display: flex;
-            flex-direction: column;
-            color: white;
-            min-width: 300px;
-            width: 800px;
-            padding: 20px;
-            border-radius: 10px;
-            background: rgba(255, 255, 255, 0.2);
-            gap: 20px;
-
-            h1 {
-                font-size: 2rem;
-                margin-bottom: 20px;
-            }
-
-            p {
-                font-size: 1rem;
-            }
-        }
-        #hero-btn {
-            display: flex;
-            justify-content: center;
-        }
-
-        #hero-btn {
-            display: block;
-            position: absolute;
-            bottom: 100px;
-            left: 260px;
-
-            button {
-                background-color: #FEC908;
-                color: black;
-                border: none;
-                padding: 10px 20px;
-                border-radius: 5px;
-                font-size: 1rem;
-                cursor: pointer;
-            }
-            &:hover {
-                button {
-                    background-color: black;
-                    color: white;
-                }
-            }
-        }
-        #hero-img img {
-            width: 600px;
-            height: auto;
-            object-fit: cover;
-            border-radius: 50%;
-            box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.3), 
-                10px 10px 20px rgba(0, 0, 0, 0.1);
-        }
-
-        @media  (max-width: 1200px) {
-            #hero {
-                display: flex;
-                flex-direction: column;
-            }
-
-            #hero-content {
-                min-width: 100%;
-                width: 100%;
-                padding: 20px;
-                border-radius: 10px;
-                background: rgba(255, 255, 255, 0.2);
-                gap: 40px;
-                margin-top: 20px;
-                text-align: center;
-
-                h1 {
-                    font-size: 1.5rem;
-                }
-
-                p {
-                    font-size: 0.8rem;
-                }
-            }
-
-            #hero-img img {
-                width: 100%;
-                height: auto;
-                object-fit: contain;
-                border-radius: 50%;
-            }
-
-            #hero-btn {
-                position: inherit;
-                bottom: 0;
-            }
-        }
-    </style>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <header>
+        <div class="logo">My English Teacher</div>
+        <nav>
+            <ul>
+                <li><a href="#about">Sobre nosotros</a></li>
+                <li><a href="#services">Servicios</a></li>
+                <li><a href="#testimonials">Testimonios</a></li>
+                <li><a href="#contact">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
     <main>
         <section id="hero">
             <div id="hero-content">
                 <h1>¡Aprende inglés a tu ritmo, con una maestra que se adapta a ti!</h1>
                 <p>Clases personalizadas para niños, adolescentes y adultos. Desde cualquier parte del mundo.</p>
                 <p>¡Tu maestra de inglés virtual está aquí para ayudarte a avanzar!</p>
-            </div>
-            <div id="hero-btn">
-                <button>Reserva tu primera clase hoy</button>
+                <div id="hero-btn">
+                    <button>Reserva tu primera clase hoy</button>
+                </div>
             </div>
             <div id="hero-img">
                 <img src="./assets/hero image.png" alt="Imagen principal">
             </div>
         </section>
     </main>
+    <footer id="contact">
+        <h2>¡Contáctanos!</h2>
+        <p>Correo: mancia1408@gmail.com</p>
+        <p>WhatsApp: +503 7529 3458</p>
+    </footer>
 </body>
 </html>
