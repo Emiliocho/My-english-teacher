@@ -3,13 +3,34 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Contactanos</title>
+    <link rel="stylesheet" href="style.css">
+    
 </head>
 <body>
-    <main>
-        <section>
-            <form action="submit" method="post"></form>
-        </section>
-    </main>
+     <header>
+        <div class="logo">My English Teacher</div>
+        <nav>
+            <ul>
+                <li><a href="#about">Sobre nosotros</a></li>
+                <li><a href="#services">Servicios</a></li>
+                <li><a href="#testimonials">Testimonios</a></li>
+                <li><a href="#contact">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+  <div class="form-container">
+    <h1>Contáctanos</h1>
+    <form id="contact-form" action="mailto:mancia1408@gmail.com" method="POST" enctype="text/plain">
+      <input type="text" name="nombre" placeholder="Tu nombre" required />
+      <input type="email" name="email" placeholder="Correo electrónico" required />
+      <input type="tel" name="telefono" placeholder="Número de teléfono" required />
+      <textarea name="mensaje" placeholder="Tu mensaje..." rows="5" required></textarea>
+      <button type="submit">Enviar</button>
+    </form>
+    <p id="form-status"></p>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>
